@@ -57,7 +57,9 @@ To run prettysass and alphabetize properties on all files in your scss directory
 grunt.initConfig({
   prettysass: {
     options: {
-      alphabetize: true
+      alphabetize: true,
+      indent: 2,
+      removeBlankLines: false
     },
     app: {
       src: ['scss/**/*.scss']
