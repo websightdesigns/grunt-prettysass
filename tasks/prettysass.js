@@ -211,7 +211,7 @@ module.exports = function(grunt) {
 							removeBlankLines(file.toString(), done);
 						}
 					} else {
-						if (filesComplete ===  filesLength - 1) {
+						if (filesComplete === filesLength - 1) {
 							done( true );
 						} else {
 							filesComplete++;
