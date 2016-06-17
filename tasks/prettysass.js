@@ -143,11 +143,36 @@ module.exports = function(grunt) {
       });
   }
 
+  function removeBlankLines(file, done) {
+    grunt.log.writeln('removing blank lines: '.green + file);
+    fs.readFile(file, function(err, data) {
+      if (err) {
+        throw err;
+      }
+
+      var outputString = data.toString();
+
+      var newOutputString = outputString.replace(/(^[ \t]*\n)/gm, "");
+
+      newOutputString = _.trim(newOutputString);
+
+      fs.writeFile(file, newOutputString, 'utf8', function() {
+        if (filesComplete ===  filesLength - 1) {
+          done( true );
+        } else {
+          filesComplete++;
+        }
+      });
+
+    });
+  }
+
   grunt.registerMultiTask('prettysass', 'Prettify your SASS source files.', function() {
 
     var options = this.options({
       'alphabetize': false,
-      'indent': '2'
+      'indent': '2',
+      'removeBlankLines': false
     });
     var files = this.filesSrc;
     var done = this.async();
@@ -172,6 +197,9 @@ module.exports = function(grunt) {
           grunt.log.error( file + ': ' + error );
           done( false );
         } else {
+          if (options.removeBlankLines) {
+            removeBlankLines(file.toString(), done);
+          }
           if (options.alphabetize) {
             alphabetize(file.toString(), done);
           } else {
