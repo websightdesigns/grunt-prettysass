@@ -47,7 +47,11 @@ Sort SASS properties alphabetically.
 Type: `mixed`
 Default value: `2`
 
-How many spaces to use for each level of indentation. Defaults to 2. "t" means use hard tabs.
+#### options.removeBlankLines
+Type: `Boolean`
+Default value: `false`
+
+Remove blank/empty lines from the output.
 
 ### Usage Examples
 
