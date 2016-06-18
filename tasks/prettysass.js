@@ -129,12 +129,11 @@ module.exports = function(grunt) {
 			flattened = _.flatten(output);
 
 			_.each(flattened, function (section) {
+grunt.log.writeln('section: '.green + section);
 				outputString += section + '\n';
 			});
 
 			outputString = _.trim(outputString);
-
-grunt.log.writeln('outputString: '.green + outputString);
 
 			fs.writeFile(file, outputString, 'utf8', function() {
 				if (filesComplete === filesLength - 1) {
