@@ -47,11 +47,13 @@ Sort SASS properties alphabetically.
 Type: `mixed`
 Default value: `2`
 
+Set the number of spaces to use for indenting. Use "t" to use a hard tab.
+
 #### options.removeBlankLines
 Type: `Boolean`
 Default value: `false`
 
-Remove blank/empty lines from the output.
+Remove blank/empty lines from the output. This option will also add a blank line at the very end of the file.
 
 ### Usage Examples
 
