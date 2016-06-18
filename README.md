@@ -4,7 +4,7 @@
 
 Forked from https://github.com/brandonminch/grunt-prettysass
 
-The repository by user `brandonminch` hasn't been updated since 2013, so we've updated the plugin to allow the removal of blank lines, and fixed some minor bugs.
+We've updated the plugin to allow the removal of blank lines, and fixed some minor bugs.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
