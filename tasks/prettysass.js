@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 			outputString = _.trim(outputString);
 
 			fs.writeFile(file, outputString, 'utf8', function() {
-				if (filesComplete ===  filesLength - 1) {
+				if (filesComplete === filesLength - 1) {
 					done( true );
 				} else {
 					filesComplete++;
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
 			newOutputString = outputString.replace(/(^[ \t]*\n)/gm, "")  + '\n';
 
 			fs.writeFile(file, newOutputString, 'utf8', function() {
-				if (filesComplete ===  filesLength - 1) {
+				if (filesComplete === filesLength - 1) {
 					done( true );
 				} else {
 					filesComplete++;
