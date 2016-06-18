@@ -186,9 +186,6 @@ module.exports = function(grunt) {
 			filesLength = files.length;
 		}
 
-		grunt.log.writeln('files: '.cyan + files);
-		grunt.log.writeln('filesLength: '.cyan + filesLength);
-
 		// Iterate over all specified file groups.
 		files.forEach(function(file, i) {
 
