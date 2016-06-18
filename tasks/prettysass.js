@@ -134,6 +134,8 @@ module.exports = function(grunt) {
 
 			outputString = _.trim(outputString);
 
+grunt.log.writeln('outputString: '.green + outputString);
+
 			fs.writeFile(file, outputString, 'utf8', function() {
 				if (filesComplete === filesLength - 1) {
 					done( true );
