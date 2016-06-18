@@ -111,6 +111,7 @@ module.exports = function(grunt) {
 			_.each(output, function(selector, i) {
 				if (_.isArray(selector)) {
 					output[i] = _.sortBy(selector, function (line) {
+grunt.log.writeln('selector: '.green + selector);
 						// If commented line, find property to sort by.
 						if (/^\s*(\/)/.test(line)) {
 							var property = line.match(/^(?!\s*(\/)).*/gm);
@@ -130,7 +131,6 @@ module.exports = function(grunt) {
 
 			_.each(flattened, function (section) {
 				if(section != '') {
-grunt.log.writeln('section: '.green + section);
 					outputString += section + '\n';
 				}
 			});
