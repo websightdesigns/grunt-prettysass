@@ -108,7 +108,8 @@ module.exports = function(grunt) {
 				}
 
 			});
-grunt.log.writeln('output: '.green + output);
+
+			//grunt.log.writeln('output: '.green + output);
 			_.each(output, function(selector, i) {
 				if (_.isArray(selector)) {
 					output[i] = _.sortBy(selector, function (line) {
@@ -124,6 +125,7 @@ grunt.log.writeln('output: '.green + output);
 							return line;
 						}
 					});
+					grunt.log.writeln('output[i]: '.green + output[i]);
 				}
 			});
 
