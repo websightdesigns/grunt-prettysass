@@ -204,9 +204,11 @@ grunt.log.writeln('output: '.green + output);
 					done( false );
 				} else {
 					if (options.alphabetize || options.indent) {
+						// alphabetize the sass, not currently working :(
 						if (options.alphabetize) {
 							alphabetize(file.toString(), done);
 						}
+						// remove the new lines after everything else has run
 						if (options.removeBlankLines) {
 							removeBlankLines(file.toString(), done);
 						}
