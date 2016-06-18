@@ -108,10 +108,10 @@ module.exports = function(grunt) {
 				}
 
 			});
+grunt.log.writeln('output: '.green + output);
 			_.each(output, function(selector, i) {
 				if (_.isArray(selector)) {
 					output[i] = _.sortBy(selector, function (line) {
-grunt.log.writeln('selector: '.green + selector);
 						// If commented line, find property to sort by.
 						if (/^\s*(\/)/.test(line)) {
 							var property = line.match(/^(?!\s*(\/)).*/gm);
