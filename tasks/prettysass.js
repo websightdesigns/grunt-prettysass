@@ -129,8 +129,10 @@ module.exports = function(grunt) {
 			flattened = _.flatten(output);
 
 			_.each(flattened, function (section) {
+				if(section != '') {
 grunt.log.writeln('section: '.green + section);
-				outputString += section + '\n';
+					outputString += section + '\n';
+				}
 			});
 
 			outputString = _.trim(outputString);
