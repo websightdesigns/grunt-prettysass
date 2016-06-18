@@ -2,13 +2,17 @@
 
 > Prettify and alphabetize your SASS source files.
 
+Forked from https://github.com/brandonminch/grunt-prettysass
+
+The repository by user `brandonminch` hasn't been updated since 2013, so we've updated the plugin to allow the removal of blank lines, and fixed some minor bugs.
+
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-prettysass --save-dev
+npm install websightdesigns/grunt-prettysass --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
@@ -47,7 +51,7 @@ Sort SASS properties alphabetically.
 Type: `mixed`
 Default value: `2`
 
-Set the number of spaces to use for indenting. Use "t" to use a hard tab.
+Set the number of spaces to use for indenting. For a number of spaces use a numeric value, or for tab characters use the string "t".
 
 #### options.removeBlankLines
 Type: `Boolean`
